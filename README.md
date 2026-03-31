@@ -56,7 +56,7 @@ drwxr-xr-x   3 yeyeong07031575  yeyeong07031575   96  3 31 18:54 .
 drwxr-x---+ 19 yeyeong07031575  yeyeong07031575  608  3 31 18:53 ..
 -rwxrwxrwx   1 yeyeong07031575  yeyeong07031575    0  3 31 18:54 README.md
 
-yeyeong07031575@c3r9s7 mission % chmod 644 readme.md
+yeyeong07031575@c3r9s7 mission % chmod 644 README.md
 
 yeyeong07031575@c3r9s7 mission % ls -la
 total 0
