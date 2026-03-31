@@ -63,3 +63,22 @@ total 0
 drwxr-xr-x   3 yeyeong07031575  yeyeong07031575   96  3 31 18:54 .
 drwxr-x---+ 19 yeyeong07031575  yeyeong07031575  608  3 31 18:53 ..
 -rw-r--r--   1 yeyeong07031575  yeyeong07031575    0  3 31 18:54 README.md
+```
+
+### 4.2 Docker 기본 점검 및 운영
+> Docker 버전, 정보, 그리고 컨테이너 실행 로그를 기록합니다.
+
+```bash
+% docker --version
+Docker version 28.5.2, build ecc6942
+
+% docker info
+Client:
+ Version:    28.5.2
+ Context:    orbstack
+
+Server:
+ Containers: 0
+ Running: 0
+ Server Version: 28.5.2
+ Operating System: OrbStack
