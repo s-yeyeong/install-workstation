@@ -120,5 +120,25 @@ root@463faa6f48b9:/# echo "hello Codyssey!"
 hello Codyssey!
 root@463faa6f48b9:/# exit
 exit
+```
 
+### 4.3 나만의 웹 서버 구축 (Dockerfile & 포트 매핑)
+> (A) NGINX 웹 서버 베이스 이미지를 활용하여 나만의 정적 웹페이지를 띄웁니다.
+
+- **Dockerfile 코드**:
+```dockerfile
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
+```
+
+- **빌드 및 실행 로그**:
+```bash
+% docker build -t final-web-9999 .
+% docker run -d -p 9999:80 final-web-9999
+```
+
+- **포트 접속 증거**:
+> 브라우저 주소창이 보이게 캡처한 이미지를 아래에 첨부하세요.
+(<img width="599" height="250" alt="스크린샷 2026-03-31 오후 9 36 28" src="https://github.com/user-attachments/assets/83776a19-e214-4878-a107-eb7ade77535c" />
+)
 
