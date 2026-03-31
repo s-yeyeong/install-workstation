@@ -112,3 +112,13 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 
+% docker run -it ubuntu bash  
+root@463faa6f48b9:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@463faa6f48b9:/# echo "hello Codyssey!"
+hello Codyssey!
+root@463faa6f48b9:/# exit
+exit
+
+
