@@ -217,6 +217,7 @@ branch 'main' set up to track 'origin/main'.
 > - **Git Config**: 누가 코드를 작성했는지 식별하기 위해 `user.name`과 `user.email`을 글로벌로 설정했습니다.
 > - **GitHub 연동**: 로컬에서 `git init`으로 저장소를 만들고, `remote add origin`으로 GitHub 원격 저장소를 연결한 뒤 `push`하여 로컬의 작업물을 안전하게 백업 및 팀원들과 공유할 수 있는 환경을 구성했습니다.
 
+---
 
 ### 5. 트러블슈팅 (Troubleshooting)
 
