@@ -151,8 +151,8 @@ COPY index.html /usr/share/nginx/html/index.html
 ```bash
 % docker run -d -p 7777:80 -v $(pwd):/usr/share/nginx/html nginx:latest
 ```
-- **결과 확인**:
 
--v $(pwd):/usr/share/nginx/html 옵션을 사용하여 맥북의 현재 폴더와 NGINX 컨테이너의 폴더를 연결(마운트)하였습니다. 브라우저에서 localhost:7777에 접속하여 로컬(맥북)에 만든 index.html 파일이 성공적으로 웹 서버에 반영된 것을 확인했습니다.
+- **결과 확인**:
+> 'v $(pwd):/usr/share/nginx/html' 옵션을 사용하여 맥북의 현재 폴더와 NGINX 컨테이너의 폴더를 연결(마운트)하였습니다. 브라우저에서 localhost:7777에 접속하여 로컬(맥북)에 만든 index.html 파일이 성공적으로 웹 서버에 반영된 것을 확인했습니다.
 
 
