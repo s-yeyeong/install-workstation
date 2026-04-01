@@ -144,4 +144,15 @@ COPY index.html /usr/share/nginx/html/index.html
 (<img width="599" height="250" alt="스크린샷 2026-03-31 오후 9 36 28" src="https://github.com/user-attachments/assets/83776a19-e214-4878-a107-eb7ade77535c" />
 
 
+### 4.4 데이터 영속성 (Volume)
+> (A) 호스트(맥북)의 디렉토리와 컨테이너 내부 디렉토리를 연결하여, 컨테이너를 삭제해도 데이터가 유지됨을 확인합니다.
+
+- **실행 명령어**:
+```bash
+% docker run -d -p 7777:80 -v $(pwd):/usr/share/nginx/html nginx:latest
+
+결과 확인:
+
+-v $(pwd):/usr/share/nginx/html 옵션을 사용하여 맥북의 현재 폴더와 NGINX 컨테이너의 폴더를 연결(마운트)하였습니다. 브라우저에서 localhost:7777에 접속하여 로컬(맥북)에 만든 index.html 파일이 성공적으로 웹 서버에 반영된 것을 확인했습니다.
+
 
