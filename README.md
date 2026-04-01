@@ -157,7 +157,7 @@ COPY index.html /usr/share/nginx/html/index.html
 > 증거 사진 첨부
 
 
-(<img width="599" height="250" alt="스크린샷 2026-03-31 오후 9 36 28" src="https://github.com/user-attachments/assets/83776a19-e214-4878-a107-eb7ade77535c" />
+<img width="599" height="250" alt="스크린샷 2026-03-31 오후 9 36 28" src="https://github.com/user-attachments/assets/83776a19-e214-4878-a107-eb7ade77535c" />
 
 > **[개념 정리] 이미지/컨테이너 및 네트워크 구조 설계**
 > - **디렉토리 구조 설계**: `Dockerfile`과 소스 코드(`index.html`)만 존재하는 독립된 폴더를 구성하여, 빌드 시 불필요한 파일이 도커 데몬에 전송되는 것을 막고 재현성을 높였습니다.
@@ -174,7 +174,7 @@ COPY index.html /usr/share/nginx/html/index.html
 ```
 
 - **결과 확인**:
-> 'v $(pwd):/usr/share/nginx/html' 옵션을 사용하여 맥북의 현재 폴더와 NGINX 컨테이너의 폴더를 연결(마운트)하였습니다. 브라우저에서 localhost:7777에 접속하여 로컬(맥북)에 만든 index.html 파일이 성공적으로 웹 서버에 반영된 것을 확인했습니다.
+> -v $(pwd):/usr/share/nginx/html' 옵션을 사용하여 맥북의 현재 폴더와 NGINX 컨테이너의 폴더를 연결(마운트)하였습니다. 브라우저에서 localhost:7777에 접속하여 로컬(맥북)에 만든 index.html 파일이 성공적으로 웹 서버에 반영된 것을 확인했습니다.
 
 > **[개념 정리] 데이터 영속성과 볼륨 마운트**
 > - **데이터 증발 문제와 대안**: 컨테이너 삭제 시 쓰기 가능한(Writable) 임시 레이어도 함께 날아가 데이터가 소실됨을 확인했습니다. 이를 방지하기 위해 호스트 디스크와 컨테이너 내부를 연결하는 볼륨 마운트(`-v`)를 사용했습니다.
