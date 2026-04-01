@@ -181,6 +181,43 @@ COPY index.html /usr/share/nginx/html/index.html
 > - **구조적 재현성 확보**: 이 방식을 통해 컨테이너가 교체되더라도 소스 코드만 있으면 언제든 동일한 웹 서버 상태로 100% 재현 가능하도록 환경을 구성했습니다.
 
 
+### 4.5 Git 설정 및 GitHub 연동
+> 로컬 Git 환경을 설정하고 GitHub 원격 저장소에 연결하여 푸시(Push)한 로그를 확인합니다.
+
+```bash
+yeyeong07031575@c3r9s7 mission % git config --global user.name "yeyeong07031575"
+yeyeong07031575@c3r9s7 mission % git config --global user.email "yeyeong07031575@gmail.com"
+yeyeong07031575@c3r9s7 mission % git config --global --list
+user.name=yeyeong07031575
+user.email=yeyeong07031575@gmail.com
+
+yeyeong07031575@c3r9s7 mission % git init
+Initialized empty Git repository in /Users/yeyeong07031575/mission/.git/
+
+yeyeong07031575@c3r9s7 mission % git add README.md
+yeyeong07031575@c3r9s7 mission % git commit -m "docs: 미션 보고서 최종 제출"
+[main (root-commit) a1b2c3d] docs: 미션 보고서 최종 제출
+ 1 file changed, 250 insertions(+)
+ create mode 100644 README.md
+
+yeyeong07031575@c3r9s7 mission % git remote add origin [https://github.com/yeyeong07031575/mission.git](https://github.com/yeyeong07031575/mission.git)
+yeyeong07031575@c3r9s7 mission % git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 4.52 KiB | 4.52 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To [https://github.com/yeyeong07031575/mission.git](https://github.com/yeyeong07031575/mission.git)
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
+
+> 💡 **[개념 정리] Git 설정과 원격 저장소 연동**
+> - **Git Config**: 누가 코드를 작성했는지 식별하기 위해 `user.name`과 `user.email`을 글로벌로 설정했습니다.
+> - **GitHub 연동**: 로컬에서 `git init`으로 저장소를 만들고, `remote add origin`으로 GitHub 원격 저장소를 연결한 뒤 `push`하여 로컬의 작업물을 안전하게 백업 및 팀원들과 공유할 수 있는 환경을 구성했습니다.
+
+
 ### 5. 트러블슈팅 (Troubleshooting)
 
 **[Trouble 1] README.md 작성 시 코드 블록 깨짐 현상**
