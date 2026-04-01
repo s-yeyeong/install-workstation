@@ -139,6 +139,8 @@ COPY index.html /usr/share/nginx/html/index.html
 
 - **포트 접속 증거**:
 > 증거 사진 첨부
+
+
 (<img width="599" height="250" alt="스크린샷 2026-03-31 오후 9 36 28" src="https://github.com/user-attachments/assets/83776a19-e214-4878-a107-eb7ade77535c" />
 
 
