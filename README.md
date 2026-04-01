@@ -4,19 +4,19 @@
 이 프로젝트는 코드가 내 컴퓨터에서만 돌아가는 문제를 해결하고, 팀원 누구나 동일하게 실행할 수 있는 '재현 가능한 개발 환경'을 구축하는 것을 목표로 합니다. 리눅스 CLI, Docker, Git을 활용하여 환경 세팅의 기본기를 다집니다.
 
 ## 2. 실행 환경
-- **OS**: (예: macOS Sonoma / Windows 11 / Ubuntu 22.04)
-- **터미널 및 쉘**: (예: Terminal / Git Bash / zsh / bash)
-- **Docker 버전**: (나중에 확인하고 채워넣을 곳)
-- **Git 버전**: (나중에 확인하고 채워넣을 곳)
+- **OS**: macOS
+- **터미널 및 쉘**: Terminal / zsh
+- **Docker 버전**: Docker version 28.5.2, build ecc6942
+- **Git 버전**: git version 2.53.0
 
 ## 3. 수행 항목 체크리스트
-- [ ] 터미널/권한 조작 실습
-- [ ] Docker (OrbStack) 설치 및 데몬 점검
-- [ ] Docker 기본 운영 명령 (images, ps, logs, stats 등)
-- [ ] Dockerfile 기반 커스텀 웹 서버 컨테이너 빌드
-- [ ] 포트 매핑 접속 검증
-- [ ] 바인드 마운트 및 볼륨 영속성 검증
-- [ ] Git 설정 및 GitHub/VSCode 연동
+- [x] 터미널/권한 조작 실습
+- [x] Docker (OrbStack) 설치 및 데몬 점검
+- [x] Docker 기본 운영 명령 (images, ps, logs, stats 등)
+- [x] Dockerfile 기반 커스텀 웹 서버 컨테이너 빌드
+- [x] 포트 매핑 접속 검증
+- [x] 바인드 마운트 및 볼륨 영속성 검증
+- [x] Git 설정 및 GitHub/VSCode 연동
 
 ---
 
