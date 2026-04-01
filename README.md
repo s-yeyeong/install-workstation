@@ -138,7 +138,7 @@ COPY index.html /usr/share/nginx/html/index.html
 ```
 
 - **포트 접속 증거**:
-> 브라우저 주소창이 보이게 캡처한 이미지를 아래에 첨부하세요.
 (<img width="599" height="250" alt="스크린샷 2026-03-31 오후 9 36 28" src="https://github.com/user-attachments/assets/83776a19-e214-4878-a107-eb7ade77535c" />
-)
+
+
 
