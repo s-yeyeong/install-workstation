@@ -213,7 +213,7 @@ To [https://github.com/yeyeong07031575/mission.git](https://github.com/yeyeong07
 branch 'main' set up to track 'origin/main'.
 ```
 
-> 💡 **[개념 정리] Git 설정과 원격 저장소 연동**
+> **[개념 정리] Git 설정과 원격 저장소 연동**
 > - **Git Config**: 누가 코드를 작성했는지 식별하기 위해 `user.name`과 `user.email`을 글로벌로 설정했습니다.
 > - **GitHub 연동**: 로컬에서 `git init`으로 저장소를 만들고, `remote add origin`으로 GitHub 원격 저장소를 연결한 뒤 `push`하여 로컬의 작업물을 안전하게 백업 및 팀원들과 공유할 수 있는 환경을 구성했습니다.
 
