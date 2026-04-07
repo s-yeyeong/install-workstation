@@ -180,15 +180,37 @@ COPY index.html /usr/share/nginx/html/index.html
 ### 4.4 데이터 영속성 (Volume)
 > (A) 호스트(맥북)의 디렉토리와 컨테이너 내부 디렉토리를 연결하여, 컨테이너를 삭제해도 데이터가 유지됨을 확인합니다.
 
-- **실행 명령어**:
+- **데이터 영속성 검증**:
 ```bash
-% docker run -d -p 7777:80 -v $(pwd):/usr/share/nginx/html nginx:latest
+# 1. 호스트에서 테스트 파일 생성
+% echo "Data is still here" > persistence.txt
+
+# 2. 볼륨 마운트를 적용하여 컨테이너 실행
+% docker run -d --name vol-test -v $(pwd):/usr/share/nginx/html nginx:latest
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+5435b2dcdf5c: Pull complete 
+dfad2fd217a9: Pull complete 
+49e2055f2936: Pull complete 
+9119986bbc9f: Pull complete 
+c58dd643e1bc: Pull complete 
+13138f198f1b: Pull complete 
+02e3f96dd990: Pull complete 
+Digest: sha256:381b45aeb56e1ab20ed5ec5fe6483f44050d9ce1a837575f0d1333a6c6e4e251
+Status: Downloaded newer image for nginx:latest
+4a18cca7880fe3c29ab0be7ef31bc9771f3780812da659517f285688b0f8a3d5
+
+# 3. 컨테이너 삭제 (데이터 파기 시도)
+% docker rm -f vol-test
+vol-test
+
+# 4. 새 컨테이너 실행 후 내부 데이터 조회
+% docker run --rm -v $(pwd):/usr/share/nginx/html nginx:latest cat /usr/share/nginx/html/persistence.txt
+Data is still here
 ```
 
-> 브라우저에서 `localhost:7777`에 접속하여 로컬 파일 반영을 확인했습니다. 컨테이너를 강제 삭제(`docker rm -f`)한 후에도 호스트 디렉토리에 파일이 그대로 남아있음을 검증했습니다.
-
 > **[동작 구조 설계: 재현성 확보]**
-> 포트 매핑과 바인드 마운트(`-v $(pwd):...`) 설정을 명확한 명령어로 분리 정리함으로써, 어느 컴퓨터에서든 소스 코드 폴더와 도커 명령어 한 줄만 있으면 100% 동일한 상태의 웹 서버를 즉시 띄울 수 있도록 재현 가능한 환경을 구축했습니다.
+> 포트 매핑과 바인드 마운트(`-v $(pwd):...`) 설정을 명확한 명령어로 분리 정리함으로써, 어느 컴퓨터에서든 소스 코드 폴더와 도커 명령어 한 줄만 있으면 동일한 상태의 웹 서버를 즉시 띄울 수 있도록 재현 가능한 환경을 구축했습니다.
 
 
 ### 4.5 Git 설정 및 GitHub 연동
